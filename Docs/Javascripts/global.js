@@ -128,3 +128,4 @@ async function initializeDropdowns() {
 
 // Fetch and initialize dropdowns
 initializeDropdowns();
+
