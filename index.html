@@ -39,43 +39,48 @@
         <img src="./Docs/Assets/overly.webp" class="absolute scale-110 top-0 left-0 w-full h-full" alt="">
         <img src="./Docs/Assets/overly.webp" class="absolute scale-110 top-0 left-0 w-full h-full rotate-180" alt="">
         <div
-            class="flex items-center justify-between md:px-5 px-1 py-3 rounded-lg max-w-7xl w-full z-20 relative mx-auto  gap-4">
+            class="flex items-center justify-between md:px-5 px-1 py-3 rounded-lg max-w-7xl w-full z-20 relative mx-auto  md:gap-4">
             <a href="./index.html" class="font-semibold block text-lg text-white"><img src="./Docs/Assets/GR White.png"
-                    class="h-8" alt=""> </a>
-            <div class="lg:flex hidden items-center gap-4">
-                <ul class="text-white flex items-center gap-5 font-medium">
-                    <li><a href="" class="navUnderLine">Contacto</a></li>
-                    <li><a href="" class="navUnderLine">Buses </a></li>
-                    <li><a href="" class="navUnderLine">Busetas </a></li>
-                    <li><a href="" class="navUnderLine">Taxi </a></li>
-                    <li><a href="" class="navUnderLine">Aeropuerto</a></li>
+                    class="md:h-8 h-6" alt=""> </a>
+            <div class="flex items-center justify-between md:gap-5 gap-5">
+                <div class="lg:flex hidden items-center gap-4">
+                    <ul class="text-white flex items-center gap-5 font-medium">
+                        <li><a href="" class="navUnderLine">Contacto</a></li>
+                        <li><a href="" class="navUnderLine">Buses </a></li>
+                        <li><a href="" class="navUnderLine">Busetas </a></li>
+                        <li><a href="" class="navUnderLine">Taxi </a></li>
+                        <li><a href="" class="navUnderLine">Aeropuerto</a></li>
 
-                </ul>
-                <button
-                    class="text-black bg-white openContactForm border-2 border-white rounded-2xl font-medium px-6 py-2 cursor-pointer hover:bg-transparent hover:text-[#fff] transition-all duration-500 text-nowrap">
-                    CONTACTENOS
-                </button>
+                    </ul>
+                    <button
+                        class="text-black bg-white openContactForm border-2 border-white rounded-2xl font-medium px-6 py-2 cursor-pointer hover:bg-transparent hover:text-[#fff] transition-all duration-500 text-nowrap">
+                        CONTACTENOS
+                    </button>
+                </div>
                 <div class=" group cursor-pointer">
                     <div class="pb-2">
                         <div class="flex rounded-xl  p-3 items-center gap-2 border-2 border-white">
-                            <img src="https://flagcdn.com/w40/us.png" alt="us Flag" class="w-6 h-4">
+                            <img src="https://flagcdn.com/w40/es.png" alt="Spanish Flag" class="w-6 h-4">
                             <i class="fa-solid fa-angle-down text-white"></i>
                         </div>
                     </div>
-                    <div class="border-2 rounded-xl overflow-hidden fadeIn  group-hover:block hidden  absolute border-white">
-                        <a href="" class="flex p-[7px] items-center gap-2 transition-all duration-500 hover:bg-[#ffffff27]">
+                    <div
+                        class="border-2 rounded-xl overflow-hidden fadeIn  group-hover:block hidden  absolute border-white">
+                        <a href=""
+                            class="flex p-[7px] items-center gap-2 transition-all duration-500 hover:bg-[#ffffff27]">
                             <img src="https://flagcdn.com/w40/us.png" alt="us Flag" class="w-6 h-4">
-                            <p class="text-white">Sp..</p>
+                            <p class="text-white">US..</p>
                         </a>
-                        <a href="" class="flex p-[7px] items-center gap-2 transition-all duration-500 hover:bg-[#ffffff27]  ">
-                            <img src="https://flagcdn.com/w40/us.png" alt="us Flag" class="w-6 h-4">
+                        <a href=""
+                            class="flex p-[7px] items-center gap-2 transition-all duration-500 hover:bg-[#ffffff27]  ">
+                            <img src="https://flagcdn.com/w40/fr.png" alt="French Flag" class="w-6 h-4">
                             <p class="text-white">Fr...</p>
                         </a>
                     </div>
                 </div>
+                <i class="fa-solid fa-bars text-white text-2xl cursor-pointer lg:hidden" id="openNav"></i>
             </div>
 
-            <i class="fa-solid fa-bars text-white text-2xl cursor-pointer lg:hidden" id="openNav"></i>
 
         </div>
 
@@ -93,7 +98,14 @@
 
     <div class="flex p-5 max-w-7xl md:gap-16 w-full mx-auto">
         <div class="w-80 md:block hidden fixed top-10 left-5">
-            <img src="./Docs/Assets/banner.png" class="w-full" alt="">
+            <div class="relative">
+                <img src="./Docs/Assets/banner.png" class="w-full" alt="">
+                <a href="#" class="absolute block w-60 left-10 h-20 top-32"></a>
+                <a href="#" class="absolute block w-60 left-10 h-32 top-60"></a>
+                <a href="#" class="absolute block w-16 left-10 h-16 bottom-8"></a>
+                <a href="#" class="absolute block w-16 left-32 h-16 bottom-8"></a>
+                <a href="#" class="absolute block w-16 right-10 h-16 bottom-8"></a>
+            </div>
         </div>
         <div class="w-80 md:block hidden"></div>
         <div class="right text-white w-full">
