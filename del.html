@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fody Slider</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<style>
+    .container {
+        background-color: red;
+        max-width: 90rem;
+        padding: 0 1rem;
+        margin: 0 auto;
+        font-size: 80%;
+        scale: .45;
+    }
+
+    #tranding {
+        padding: 4rem 0;
+    }
+
+    @media (max-width:1440px) {
+        #tranding {
+            padding: 7rem 0;
+        }
+    }
+
+    #tranding .tranding-slider {
+        height: 30rem;
+        padding: 2rem 0;
+        position: relative;
+    }
+
+    @media (max-width:500px) {
+        #tranding .tranding-slider {
+            height: 45rem;
+        }
+    }
+
+    .tranding-slide {
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+
+    @media (max-width:500px) {
+        .tranding-slide {
+            width: 28rem !important;
+            height: 36rem !important;
+        }
+
+        .tranding-slide .tranding-slide-img img {
+            width: 28rem !important;
+            height: 36rem !important;
+        }
+    }
+
+    .tranding-slide .tranding-slide-img img {
+        width: 40rem;
+        height: 30rem;
+        border-radius: 2rem;
+        object-fit: cover;
+    }
+
+    .tranding-slider-control {
+        position: relative;
+        bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tranding-slider-control .swiper-button-next {
+        left: 58% !important;
+        transform: translateX(-58%) !important;
+    }
+
+    @media (max-width:990px) {
+        .tranding-slider-control .swiper-button-next {
+            left: 70% !important;
+            transform: translateX(-70%) !important;
+        }
+    }
+
+    @media (max-width:450px) {
+        .tranding-slider-control .swiper-button-next {
+            left: 80% !important;
+            transform: translateX(-80%) !important;
+        }
+    }
+
+    @media (max-width:990px) {
+        .tranding-slider-control .swiper-button-prev {
+            left: 30% !important;
+            transform: translateX(-30%) !important;
+        }
+    }
+
+    @media (max-width:450px) {
+        .tranding-slider-control .swiper-button-prev {
+            left: 20% !important;
+            transform: translateX(-20%) !important;
+        }
+    }
+</style>
+
+<body>
+    <section class="slidess" id="tranding">
+        <div class="container slidess">
+            <div class="swiper tranding-slider slidess">
+                <div class="swiper-wrapper slidess">
+                    <!-- Slide-start -->
+                    <div class="swiper-slide slidess tranding-slide">
+                        <div class="tranding-slide-img slidess ">
+                            <img src="./Docs/Assets/bus (1).jpg" alt="Bus">
+                        </div>
+                    </div>
+                    <div class="swiper-slide slidess tranding-slide">
+                        <div class="tranding-slide-img slidess">
+                            <img src="./Docs/Assets/bus (2).jpg" alt="Bus">
+                        </div>
+                    </div>
+                    <div class="swiper-slide slidess tranding-slide">
+                        <div class="tranding-slide-img slidess">
+                            <img src="./Docs/Assets/bus (3).jpg" alt="Bus">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        var TrandingSlider = new Swiper('.tranding-slider', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 3,
+            initialSlide: 1, // Set the middle slide as the default
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2.5,
+            },
+        });
+    </script>
+
+</body>
+
+</html>

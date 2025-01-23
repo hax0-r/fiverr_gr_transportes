@@ -3,10 +3,10 @@ const openNav = document.getElementById("openNav");
 const closeNav = document.getElementById("closeNav");
 
 
-openNav.addEventListener('click',()=>{
+openNav.addEventListener('click', () => {
     responsiveNavbar.style.width = "100%"
 })
-closeNav.addEventListener('click',()=>{
+closeNav.addEventListener('click', () => {
     responsiveNavbar.style.width = "0%"
 })
 
@@ -129,3 +129,23 @@ async function initializeDropdowns() {
 // Fetch and initialize dropdowns
 initializeDropdowns();
 
+const links = document.getElementById("links")
+const closeLinks = document.getElementById("closeLinks")
+const openLinks = document.getElementById("openLinks")
+
+openLinks.addEventListener('click', () => {
+    links.style.display = "flex"
+    links.style.opacity = "1"
+    closeLinks.style.opacity = "1"
+    openLinks.style.opacity = "0"
+    
+})
+
+closeLinks.addEventListener('click', () => {
+    links.style.opacity = "0"
+    closeLinks.style.opacity = "0"
+    openLinks.style.opacity = "1"
+    setTimeout(() => {
+        links.style.display = "none"
+    }, 500)
+})

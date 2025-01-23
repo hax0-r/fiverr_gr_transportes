@@ -64,6 +64,7 @@ a {
   background-color: #fff;
   transition: 200ms all;
 }
+
 .navUnderLineActive {
   position: relative;
   padding: 0 2px;
@@ -116,6 +117,7 @@ a {
 .myShadow {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
 /* =========scroll bar================= */
 
 .popup::-webkit-scrollbar {
@@ -146,3 +148,63 @@ a {
 input:user-invalid {
   border: 1.5px solid rgba(255, 0, 0, 0.416);
 }
+
+
+@keyframes bigSmallAnimation {
+
+  0%,
+  100% {
+    transform: scale(1);
+    /* Normal size */
+  }
+
+  50% {
+    transform: scale(1.1);
+    /* Bigger size */
+  }
+}
+
+.bigSmallAnimation {
+  animation: bigSmallAnimation 4s infinite ease-in-out;
+  /* Smooth scaling */
+}
+
+
+/* =============== */
+
+
+.container2 {
+  margin: 1rem auto;
+}
+
+
+
+#tranding .tranding-slider {
+  background-color: blue;
+  padding: 2rem 0;
+  position: relative;
+}
+
+
+.tranding-slide {
+  width: 20rem;
+  height: 25rem;
+  position: relative;
+}
+
+.tranding-slide .tranding-slide-img img {
+  width: 30rem;
+  height: 25rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.tranding-slider-control {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =============== */
