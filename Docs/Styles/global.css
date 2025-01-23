@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: Poppins, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.barlow {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.fira {
+  font-family: "Fira Sans", serif;
+
+}
+
+:root {
+  --black-color: #1e1c1c;
+  --white-color: #f7f7f7;
+}
+
+img,
+button,
+iframe,
+a {
+  user-select: none;
+}
+
+.slidein {
+  animation: slideAnimation 1s ease var(--slidein-delay, 0) forwards;
+}
+
+@keyframes slideAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navUnderLine {
+  position: relative;
+  padding: 0 2px;
+  cursor: pointer;
+}
+
+.navUnderLine::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: 200ms all;
+}
+.navUnderLineActive {
+  position: relative;
+  padding: 0 2px;
+  cursor: pointer;
+}
+
+.navUnderLineActive::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: 200ms all;
+}
+
+.navUnderLine:hover::before {
+  width: 100%;
+}
+
+.fadeIn {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fastFadeIn {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fastFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.myShadow {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+/* =========scroll bar================= */
+
+.popup::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+  transition: 400ms all;
+}
+
+
+.popup::-webkit-scrollbar-thumb {
+  transition: 400ms all;
+  border-radius: 1rem;
+  background-color: #00000026;
+}
+
+.popup::-webkit-scrollbar-thumb:hover {
+  background-color: #00000033;
+}
+
+.popup::-webkit-scrollbar-thumb:active {
+  transition: 400ms all;
+  background-color: #00000033;
+}
+
+
+/* =========scroll bar================= */
+
+input:user-invalid {
+  border: 1.5px solid rgba(255, 0, 0, 0.416);
+}
