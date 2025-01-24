@@ -168,3 +168,11 @@ input:user-invalid {
   animation: bigSmallAnimation 4s infinite ease-in-out;
   /* Smooth scaling */
 }
+
+.bor{
+  border-bottom: none !important;
+}
+.bor:focus{
+  border-bottom: none !important;
+  box-shadow: none !important;
+}

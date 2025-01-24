@@ -11,30 +11,9 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./Docs/Styles/global.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
-<style>
-    .swiper {
-        width: 100%;
-    }
-
-    .swiper-slide {
-        background-position: center;
-        background-size: cover;
-        width: 300px;
-        height: 200px;
-    }
-
-    .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        border-radius: 1rem;
-    }
-</style>
 
 <body class="bg-black">
 
@@ -176,33 +155,16 @@
                 traslados eficientes, seguros y confiables para sus equipos y operaciones.
             </p>
 
-
-            <div class="swiper mySwiper max-w-2xl mx-auto relative w-full md:py-10 py-5">
-                <div class="w-[58px] absolute md:block hidden bg-black h-60 top-0 z-10 left-0"></div>
-                <div class="w-[58px] absolute md:block hidden bg-black h-60 top-0 z-10 right-0"></div>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./Docs/Assets/bus (3).jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./Docs/Assets/bus (3).jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./Docs/Assets/bus (3).jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./Docs/Assets/bus (3).jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./Docs/Assets/bus (3).jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./Docs/Assets/bus (3).jpg" />
-                    </div>
-                </div>
+            <div class="carousel h-[300px] cursor-grab w-full md:max-w-[40rem] mx-auto">
+                <a class="carousel-item md:!w-[235px]"><img class="rounded-2xl h-52 w-full md:scale-125 object-cover "
+                        src="./Docs/Assets/bus (3).jpg"></a>
+                <a class="carousel-item md:!w-[235px]"><img class="rounded-2xl h-52 md:scale-125 object-cover "
+                        src="./Docs/Assets/bus (1).jpg"></a>
+                <a class="carousel-item md:!w-[235px]"><img class="rounded-2xl h-52 w-full md:scale-125 object-cover "
+                        src="./Docs/Assets/bus (2).jpg"></a>
             </div>
 
-            <div class="flex items-center justify-center">
+            <div class="flex items-center justify-center md:mt-8">
                 <button
                     class="text-black bg-white openContactForm border-2 border-white max-w-sm w-full rounded-2xl font-semibold px-6 py-2 cursor-pointer hover:bg-transparent hover:text-[#fff] transition-all uppercase tracking-widest duration-500 text-nowrap">
                     Reserva Hoy!
@@ -610,8 +572,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 
 
     <script>
@@ -625,28 +585,19 @@
         });
     </script>
 
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 1, // Default slidesPerView
-            loop: true,
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 2.5,
-                slideShadows: true,
-            },
-            breakpoints: {
-                // When the screen width is 700px or greater
-                700: {
-                    slidesPerView: 3, // Show 3 slides
-                },
-            },
-        });
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel();
+            
+            setInterval(() => {
+                $('.carousel').carousel('next');
+            }, 5000)
+            
+        });
     </script>
 
 </body>

@@ -11,13 +11,117 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./Docs/Styles/global.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <div class="flex p-5 gap-10 max-w-7xl mx-auto justify-between bg-zinc-200">
-        <div class="pin-wrapper w-80 md:block hidden left">
+<style>
+    .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        border-radius: 1rem;
+    }
+</style>
+
+<body class="bg-black">
+
+    <div class="w-0 overflow-hidden z-50 ease-[cubic-bezier(.09,.33,0,.82)] bg-white fixed left-0 top-0 h-screen transition-all duration-500"
+        id="responsiveNavbar">
+        <i class="fa-solid fa-x flex justify-end p-5 cursor-pointer pt-8 text-zinc-700 " id="closeNav"></i>
+        <ul class="flex flex-col  font-medium tracking-wide mt-6 p-2">
+            <li><a href="" class="text-nowrap block transition-all duration-500  rounded-lg bg-zinc-100 p-5 ">
+                    Contacto</a>
+            </li>
+            <li><a href="" class="text-nowrap block transition-all duration-500 mt-2  rounded-lg  p-5">
+                    Buses</a></li>
+            <li><a href="" class="text-nowrap block transition-all duration-500 mt-2  rounded-lg  p-5 closeNav">
+                    Busetas</a>
+            </li>
+            <li><a href="" class="text-nowrap block transition-all duration-500 mt-2  rounded-lg  p-5"> Al
+                    Taxi</a></li>
+            <li><a class="text-nowrap block transition-all duration-500 mt-2  rounded-lg  p-5 AffiliateBusinessOpen">
+                    Aeropuerto</a></li>
+        </ul>
+    </div>
+
+    <div class="overflow-hidden min-h-screen pt-6 relative px-4 z-40"
+        style="background: url(./Docs/Assets/section.jpg) center/cover no-repeat;">
+        <img src="./Docs/Assets/overly.webp" class="absolute scale-110 top-0 left-0 w-full h-full" alt="">
+        <img src="./Docs/Assets/overly.webp" class="absolute scale-110 top-0 left-0 w-full h-full rotate-180" alt="">
+        <div
+            class="flex items-center justify-between md:px-5 px-1 py-3 rounded-lg max-w-7xl w-full z-20 relative mx-auto  md:gap-4">
+            <a href="./index.html" class="font-semibold block text-lg text-white"><img src="./Docs/Assets/GR White.png"
+                    class="md:h-8 h-6" alt=""> </a>
+            <div class="flex items-center justify-between md:gap-5 gap-5">
+                <div class="lg:flex hidden items-center gap-4">
+                    <ul class="text-white flex items-center gap-5 font-medium">
+                        <li><a href="" class="navUnderLine">Contacto</a></li>
+                        <li><a href="" class="navUnderLine">Buses </a></li>
+                        <li><a href="" class="navUnderLine">Busetas </a></li>
+                        <li><a href="" class="navUnderLine">Taxi </a></li>
+                        <li><a href="" class="navUnderLine">Aeropuerto</a></li>
+
+                    </ul>
+                    <button
+                        class="text-black bg-white openContactForm border-2 border-white rounded-2xl font-medium px-6 py-2 cursor-pointer hover:bg-transparent hover:text-[#fff] transition-all duration-500 text-nowrap">
+                        CONTACTENOS
+                    </button>
+                </div>
+                <div class=" group cursor-pointer">
+                    <div class="pb-2">
+                        <div class="flex rounded-xl  p-3 items-center gap-2 border-2 border-white">
+                            <img src="https://flagcdn.com/w40/es.png" alt="Spanish Flag" class="w-6 h-4">
+                            <i class="fa-solid fa-angle-down text-white"></i>
+                        </div>
+                    </div>
+                    <div
+                        class="border-2 rounded-xl overflow-hidden fadeIn  group-hover:block hidden  absolute border-white">
+                        <a href=""
+                            class="flex p-[7px] items-center gap-2 transition-all duration-500 hover:bg-[#ffffff27]">
+                            <img src="https://flagcdn.com/w40/us.png" alt="us Flag" class="w-6 h-4">
+                            <p class="text-white">US..</p>
+                        </a>
+                        <a href=""
+                            class="flex p-[7px] items-center gap-2 transition-all duration-500 hover:bg-[#ffffff27]  ">
+                            <img src="https://flagcdn.com/w40/fr.png" alt="French Flag" class="w-6 h-4">
+                            <p class="text-white">Fr...</p>
+                        </a>
+                    </div>
+                </div>
+                <i class="fa-solid fa-bars text-white text-2xl cursor-pointer lg:hidden" id="openNav"></i>
+            </div>
+
+
+        </div>
+
+        <div
+            class=" min-h-[75vh] pb-6 max-w-7xl w-full mx-auto md:px-5 flex md:justify-between justify-center flex-col">
+
+            <!-- ----section code---- -->
+
+        </div>
+
+        <img src="./Docs/Assets/Separador Web.png" class="absolute w-full max-w-[100%] bottom-0  left-0" alt="">
+
+    </div>
+
+
+    <div class="flex max-w-7xl mx-auto p-4 justify-between md:flex-row flex-col mainSection items-start">
+
+        <div class="md:max-w-[30%] md:block hidden right bgBank2 rounded-3xl p-4 w-full">
             <div class="relative">
                 <img src="./Docs/Assets/banner.png" class="w-full" alt="">
                 <a href="#" class="absolute block w-60 left-10 h-20 top-32"></a>
@@ -27,8 +131,10 @@
                 <a href="#" class="absolute block w-16 right-10 h-16 bottom-8"></a>
             </div>
         </div>
-        <div class="right text-white w-[53rem] h-[200vh]">
-            <h2 class="text-center md:text-3xl text-2xl">Nuestros Servicios Estrella</h2>
+
+        <div class="md:max-w-[68%] text-white w-full">
+
+            <h2 class="text-center  md:text-3xl text-2xl">Nuestros Servicios Estrella</h2>
             <div class="flex md:flex-row flex-col items-center justify-center md:gap-10 mt-10 gap-5">
                 <img src="./Docs/Assets/frog.webp" class="h-52" alt="">
                 <p class="font-medium text-center">En GR Transportes somos una marca reconocida en Costa Rica por
@@ -37,36 +143,503 @@
                     un referente en transporte turístico y corporativo en el país.
                 </p>
             </div>
+            <div class="flex items-center justify-center md:flex-row flex-col-reverse md:gap-20 md:pt-24 pt-16 gap-5">
+                <ul class="font-medium space-y-2">
+                    <li> Giras Educativas en Costa Rica</li>
+                    <li> Traslados a Playas de Costa Rica</li>
+                    <li> Renta de Buses para Eventos Corporativos</li>
+                    <li> Excursiones a Parques Nacionales</li>
+                    <li> Viajes a Montañas y Volcanes</li>
+                    <li> Transporte para Bodas y Eventos Especiales</li>
+                    <li> Tours a Principales Destinos Turísticos</li>
+                    <li> Traslados desde y hacia Aeropuertos</li>
+                </ul>
+                <img src="./Docs/Assets/img1.webp" class="h-52 scale-x-[-1]" alt="">
+            </div>
+            <div class="flex items-end justify-center md:flex-row flex-col md:gap-10 md:pt-16 pt-16 gap-5">
+                <img src="./Docs/Assets/parrot1.webp" class="h-24 mx-auto md:mx-0 md:-mb-10" alt="">
+                <ul class="font-medium pl-5 list-disc space-y-2">
+                    <li> Servicios para Incentivos y Team Building</li>
+                    <li> Transporte VIP para Ejecutivos</li>
+                    <li> Traslados a Destinos de Playa</li>
+                    <li> Transporte para Reuniones de Negocios</li>
+                    <li> Excursiones a Zonas Históricas y Culturales</li>
+                    <li> Transporte para Viajes de Estudio</li>
+                    <li> Tours de Aventura y Eco-turismo</li>
+                </ul>
+            </div>
+            <img src="./Docs/Assets/parrot2.png" class="md:absolute md:pt-20 pt-16 mx-auto md:mx-0  right-0" alt="">
+            <h2 class="text-center  md:text-4xl text-3xl pb-5 md:pt-24 pt-8">Nuestra Flotilla</h2>
+            <p class="font-medium text-center max-w-xl w-full mx-auto">Ofrecemos transporte turístico de alta calidad,
+                conectando a viajeros con
+                los destinos más icónicos, y brindamos soluciones personalizadas a multinacionales y empresas que buscan
+                traslados eficientes, seguros y confiables para sus equipos y operaciones.
+            </p>
+
+
+            <div class="swiper mySwiper ">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./Docs/Assets/bus (3).jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Docs/Assets/bus (3).jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Docs/Assets/bus (3).jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Docs/Assets/bus (3).jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Docs/Assets/bus (3).jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Docs/Assets/bus (3).jpg" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center md:mt-8">
+                <button
+                    class="text-black bg-white openContactForm border-2 border-white max-w-sm w-full rounded-2xl font-semibold px-6 py-2 cursor-pointer hover:bg-transparent hover:text-[#fff] transition-all uppercase tracking-widest duration-500 text-nowrap">
+                    Reserva Hoy!
+                </button>
+            </div>
+            <h2 class="text-center   md:text-4xl text-3xl pb-5 md:pt-24 pt-16">Conoce Mas Sobre Nosotros</h2>
+            <div class="flex md:mt-10 mt-4 max-w-2xl w-full mx-auto items-start md:gap-6 gap-3">
+                <img src="./Docs/Assets/arrows.png" class="md:h-8 h-6 md:mt-0 mt-3" alt="">
+                <div class="">
+                    <h2 class="font-semib   old text-xl pb-3">Pioneros en Transporte Turístico y Corporativo</h2>
+                    <p>En GR Transportes, somos una empresa costarricense con más de 10 años de experiencia en el sector
+                        de transporte turístico y corporativo. Desde nuestros inicios, nos hemos dedicado a ofrecer una
+                        flota de autobuses modernos, cómodos y seguros, diseñados para cubrir las necesidades de
+                        turistas y empresas en todo Costa Rica. Nos enorgullece ser una marca icónica, reconocida por la
+                        calidad de nuestros servicios y nuestra atención al detalle.</p>
+                </div>
+            </div>
+            <div class="flex md:mt-10 mt-4 max-w-2xl w-full mx-auto items-start md:gap-6 gap-3">
+                <img src="./Docs/Assets/parrot4.png" class="md:h-20 h-14 md:mt-0 mt-3" alt="">
+                <div class="">
+                    <h2 class="font-semib   old text-xl pb-3">Seguridad, Comodidad y Estilo</h2>
+                    <p>Nuestra flota de autobuses negros decorados con majestuosos animales nacionales no solo es un
+                        símbolo de nuestra pasión por la biodiversidad, sino también un testimonio de nuestro compromiso
+                        con la calidad y el confort. Cada vehículo está equipado con tecnologías de última generación y
+                        condiciones óptimas de seguridad, para garantizar que tu experiencia de transporte sea
+                        inigualable. Ya sea que necesites traslados a las principales playas, excursiones a parques
+                        nacionales o transporte para eventos especiales, tenemos la solución perfecta para ti.</p>
+                </div>
+            </div>
+            <div class="flex md:mt-10 mt-4 max-w-2xl w-full mx-auto items-start relative md:gap-6 gap-3">
+                <img src="./Docs/Assets/arrows.png" class="md:h-8 h-6 md:mt-0 mt-3" alt="">
+                <div class="">
+                    <h2 class="font-semib   old text-xl pb-3">Viajes a Todos los Destinos</h2>
+                    <p>En GR Transportes, ofrecemos una amplia gama de servicios de transporte adaptados a las
+                        necesidades de nuestros clientes. Entre nuestros servicios más destacados se encuentran:</p>
+                    <ul class="pl-5 list-disc space-y-2 py-3">
+                        <li> Giras educativas: Diseñadas para estudiantes, con recorridos a las zonas más emblemáticas
+                            de
+                            Costa Rica.</li>
+                        <li> Excursiones a Parques Nacionales: Disfruta de la biodiversidad de Costa Rica con nuestros
+                            tours
+                            a parques como Manuel Antonio, Arenal y más.</li>
+                        <li> Transporte Corporativo: Disponemos de opciones de transporte VIP para ejecutivos y
+                            traslados
+                            para eventos corporativos y reuniones de negocios</li>
+                    </ul>
+                    <p>Nuestra capacidad para personalizar cada servicio y adaptarnos a tus necesidades es una de
+                        nuestras principales fortalezas.</p>
+                    <img src="./Docs/Assets/parrot3.webp" class="absolute md:block hidden h-20 -right-10 " alt="">
+                </div>
+            </div>
+            <div class="flex md:mt-10 mt-4 max-w-2xl w-full mx-auto items-start relative md:gap-6 gap-3">
+                <img src="./Docs/Assets/arrows.png" class="md:h-8 h-6 md:mt-0 mt-3" alt="">
+                <div class="">
+                    <h2 class="font-semib   old text-xl pb-3">Compromiso con la Biodiversidad y la Cultura Costarricense
+                    </h2>
+                    <p>En GR Transportes, entendemos que el futuro del turismo y el transporte está estrechamente
+                        relacionado con la conservación del medio ambiente y la promoción de la cultura local. Por eso,
+                        no solo brindamos un servicio excepcional, sino que también apoyamos iniciativas que fomentan el
+                        turismo sostenible y responsable. A través de nuestra flota decorada con animales emblemáticos,
+                        reflejamos nuestro amor y respeto por la fauna costarricense, mientras promovemos la educación
+                        ambiental entre nuestros clientes.</p>
+                </div>
+            </div>
+            <h2 class="text-center  md:text-4xl text-3xl pb-5 md:pt-24 pt-8">Por que Elejir GR Transportes</h2>
+            <p class="font-medium text-center max-w-xl w-full mx-auto">Cuando eliges GR Transportes, no solo estás
+                contratando un servicio de transporte, sino que estás garantizando una experiencia única, confiable y
+                cómoda desde el momento en que llegas a Costa Rica. Aquí te explicamos por qué somos la mejor opción
+                para tus traslados</p>
+
+            <div class="flex items-center justify-center mt-8">
+                <button
+                    class="text-black bg-white openContactForm border-2 border-white max-w-xl w-full rounded-2xl font-semibold px-6 py-3.5 cursor-pointer hover:bg-transparent hover:text-[#fff] transition-all uppercase tracking-widest duration-500 text-nowrap">
+                    Reserva Hoy!
+                </button>
+            </div>
+
+            <div class="grid relative md:grid-cols-2 md:pt-16 items-start pt-10 gap-6 max-w-2xl mx-auto w-full">
+                <div class="flex items-center justify-center absolute w-full h-full">
+                    <img src="./Docs/Assets/monkeys.webp" class=" md:max-w-80 w-full brightness-75" alt="">
+                </div>
+                <div class="w-full rounded-2xl p-5 bg-gradient-to-br from-[#000] relative z-10 to-[#6b6b6b]">
+                    <h2 class="text-white font-semibold text-xl text-center">Servicio de calidad excepcional</h2>
+                    <p class="pt-5 text-center font-medium">Nuestros vehículos están equipados con aire acondicionado,
+                        Wi-Fi gratuito y asientos cómodos para que tu trayecto sea agradable, ya sea corto o largo.</p>
+                </div>
+                <div class="w-full rounded-2xl p-5 bg-gradient-to-l from-[#000] relative z-10 to-[#6b6b6b]">
+                    <h2 class="text-white font-semibold text-xl text-center">Cobertura nacional e internacional</h2>
+                    <p class="pt-5 text-center font-medium">Te llevamos desde el Aeropuerto SJO a cualquier destino en
+                        Costa Rica, como playas, montañas, parques nacionales y pueblos cercanos. Además, si tu destino
+                        es Panamá o Nicaragua, tenemos opciones de transporte internacional.</p>
+                </div>
+                <div class="w-full rounded-2xl p-5 bg-gradient-to-t md:-mt-12 from-[#000] relative z-10 to-[#6b6b6b]">
+                    <h2 class="text-white font-semibold text-xl text-center">Condutores profesionales y experimentados
+                    </h2>
+                    <p class="pt-5 text-center font-medium">Todos nuestros conductores son seleccionados cuidadosamente
+                        y tienen años de experiencia en el transporte de turistas. Ellos conocen a fondo las rutas y se
+                        comprometen a brindarte un servicio excepcional.</p>
+                </div>
+                <div class="w-full rounded-2xl p-5 bg-gradient-to-tl h-full from-[#000] relative z-10 to-[#6b6b6b]">
+                    <h2 class="text-white font-semibold text-xl text-center">Precios transparentes</h2>
+                    <p class="pt-5 text-center font-medium">Ofrecemos tarifas claras y competitivas, sin cargos ocultos.
+                        Solo pagarás por el servicio que recibes, garantizando la mejor relación calidad-precio.</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-center mt-8">
+                <button
+                    class="text-black bg-white openContactForm border-2 border-white max-w-xl w-full rounded-2xl font-semibold px-6 py-3.5 cursor-pointer hover:bg-transparent hover:text-[#fff] transition-all uppercase tracking-widest duration-500 text-nowrap">
+                    Reserva Hoy!
+                </button>
+            </div>
+            <h2 class="text-center  md:text-4xl text-3xl pb-5 md:pt-24 pt-8">Servicios de Traslado</h2>
+            <p class="font-medium text-center max-w-xl w-full mx-auto">Ya sea que tu destino esté en la costa pacífica,
+                las montañas o en alguna de las famosas playas de Costa Rica, GR Transportes te ofrece varias opciones
+                de servicio de transporte para que elijas la que mejor se adapte a tus necesidades.
+            </p>
+
+            <div class="flex items-center justify-center md:flex-row flex-col-reverse md:gap-20 md:pt-24 pt-16 gap-5">
+                <ul class="font-medium md:pl-5 list-disc space-y-2">
+                    <li> Transportes Aeropuerto San José</li>
+                    <li> Transportes San José</li>
+                    <li> Transportes Aeropuerto Liberia</li>
+                    <li> Transportes La Fortuna</li>
+                    <li> Transportes Arenal</li>
+                    <li> Transportes Monteverde</li>
+                    <li> Transportes Tamarindo</li>
+                    <li> Transportes Hoteles en San José</li>
+                    <li> Transportes Hoteles en Escazú</li>
+                    <li> Transportes Hoteles en Santa Ana</li>
+                    <li> Transportes Santa Teresa</li>
+                    <li> Transportes Montezuma</li>
+                    <li> Transportes Panama</li>
+                    <li> Transportes Nicaragua</li>
+                </ul>
+                <img src="./Docs/Assets/parrot5.png" class="w-80 md:block hidden absolute right-0" alt="">
+            </div>
+
+            <h2 class="text-center  md:text-4xl text-3xl max-w-md mx-auto pb-5 md:pt-24 pt-14">Traslados desde y hacia
+                el
+                Aeropuerto SJO</h2>
+            <p class="font-medium text-center max-w-xl w-full mx-auto relative">Ya sea que tu destino esté en la costa
+                pacífica,
+                las montañas o en alguna de las famosas playas de Costa Rica, GR Transportes te ofrece varias opciones
+                de servicio de transporte para que elijas la que mejor se adapte a tus necesidades.
+                <img src="./Docs/Assets/parrot6.webp" class="absolute -top-10 left-0 h-14" alt="">
+            </p>
+
+            <div class="flex items-center justify-center mt-8">
+                <button
+                    class="text-black bg-white openContactForm border-2 border-white max-w-xl w-full rounded-2xl font-semibold px-6 py-3.5 cursor-pointer hover:bg-transparent hover:text-[#fff] transition-all uppercase tracking-widest duration-500 text-nowrap">
+                    Reserva Hoy!
+                </button>
+            </div>
+            <h2
+                class="text-center   md:text-4xl text-3xl pb-5 md:pt-24 pt-16 max-w-md md:!leading-tight w-full mx-auto">
+                Ventajas de Viajar con GR Transportes</h2>
+            <div class="flex md:mt-10 mt-4 max-w-2xl w-full mx-auto items-start md:gap-6 gap-3">
+                <img src="./Docs/Assets/arrows.png" class="md:h-8 h-6 md:mt-0 mt-3" alt="">
+                <div class="">
+                    <h2 class="font-semib   old text-xl pb-3">Transporte Privado y Exclusivo</h2>
+                    <p>Disfruta de un servicio completamente privado, sin compartir el vehículo con otros pasajeros. Te
+                        garantizamos que viajarás de forma exclusiva y cómoda, adaptándonos a tus necesidades y
+                        horarios.</p>
+                </div>
+            </div>
+            <div class="flex md:mt-10 mt-4 max-w-2xl w-full mx-auto items-start md:gap-6 gap-3">
+                <img src="./Docs/Assets/parrot4.png" class="md:h-20 h-14 md:mt-0 mt-3" alt="">
+                <div class="">
+                    <h2 class="font-semib   old text-xl pb-3">Conductores Profesionales y Amables</h2>
+                    <p>Nuestros conductores son expertos locales con amplia experiencia en el turismo y transporte,
+                        comprometidos con tu seguridad y bienestar. Además, son amables, profesionales y te brindarán
+                        información sobre los destinos que visitas, haciéndote sentir como en casa.</p>
+                </div>
+            </div>
+            <div class="flex md:mt-10 mt-4 max-w-2xl w-full mx-auto items-start relative md:gap-6 gap-3">
+                <img src="./Docs/Assets/arrows.png" class="md:h-8 h-6 md:mt-0 mt-3" alt="">
+                <div class="">
+                    <h2 class="font-semib   old text-xl pb-3">Flota Moderna y Segura</h2>
+                    <p>Contamos con vehículos modernos y bien mantenidos, equipados con todas las comodidades necesarias
+                        para que tu viaje sea lo más agradable posible. Ya sea en un automóvil de lujo, minivan o
+                        autobús, siempre viajarás en un ambiente seguro y confortable.</p>
+                    <img src="./Docs/Assets/peacock.webp" class="absolute md:block hidden h-20 -right-10 " alt="">
+                </div>
+            </div>
+            <div class="flex md:mt-10 mt-4 max-w-2xl w-full mx-auto items-start relative md:gap-6 gap-3">
+                <img src="./Docs/Assets/arrows.png" class="md:h-8 h-6 md:mt-0 mt-3" alt="">
+                <div class="">
+                    <h2 class="font-semib   old text-xl pb-3">Puntualidad Garantizada</h2>
+                    <p>Sabemos lo importante que es el tiempo para ti, por lo que nos aseguramos de llegar a tiempo para
+                        que puedas cumplir con tus horarios de vuelos, actividades o reuniones. Nuestro equipo planifica
+                        cada ruta meticulosamente para evitar retrasos innecesarios.</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-center mt-8">
+                <button
+                    class="text-black bg-white openContactForm border-2 border-white max-w-xl w-full rounded-2xl font-semibold px-6 py-3.5 cursor-pointer hover:bg-transparent hover:text-[#fff] transition-all uppercase tracking-widest duration-500 text-nowrap">
+                    Reserva Hoy!
+                </button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="bg-[#000000] md:mt-10 mt-5 z-30 relative">
+        <div class="max-w-7xl text-white w-full mx-auto p-4 pt-7 flex items-center justify-between">
+            <a href="./index.html">
+                <img src="./Docs/Assets/gold.png" class="md:h-28 h-24 rounded-full" alt="">
+            </a>
+            <button
+                class="bg-white text-black font-medium flex items-center justify-center md:px-8 px-5  rounded-full md:gap-5 gap-3 md:py-3 py-2.5 openContactForm">
+                Contactenos
+                <i class="fa-solid fa-arrow-right text-black  rounded-full"></i>
+            </button>
+        </div>
+
+        <div class="bg-white rounded-t-[2rem] md:pt-14 pt-8 p-4 mt-5">
+            <div class="max-w-7xl mx-auto text-[#13072e] w-full">
+                <div class=" grid md:grid-cols-6 gap-5 gap-y-8  sm:grid-cols-3 grid-cols-1 w-full">
+                    <div class="sm:col-span-2 md:pr-7">
+                        <h2 class="pb-2  font-semibold text-xl">Best Costa Rica Tours</h2>
+                        <p class="text-sm">Somos una empresa líder en el sector de transporte turístico y corporativo en
+                            Costa Rica. Nos especializamos en ofrecer servicios de transporte de alta calidad para
+                            excursiones, giras educativas, traslados a las principales playas, eventos corporativos, y
+                            mucho más. Nuestra flota de autobuses, distintivos por su diseño único con majestuosos
+                            animales nacionales, refleja nuestro compromiso con la biodiversidad y la cultura
+                            costarricense. Con años de experiencia en el mercado, garantizamos seguridad, comodidad y un
+                            servicio excepcional para cada uno de nuestros clientes.</p>
+                    </div>
+                    <div class="mx-auto w-full md:px-5">
+                        <h2 class="pb-4 font-semibold text-xl">Links</h2>
+                        <ul class="flex flex-col gap-1 ">
+                            <li><a href="guanacaste" class="hover:underline"> Contacto</a></li>
+                            <li><a href="monteverde" class="hover:underline"> Buses</a></li>
+                            <li><a href="fortuna" class="hover:underline"> Busetas</a></li>
+                            <li><a href="samara" class="hover:underline"> Taxi</a></li>
+                            <li><a href="shuttles" class="hover:underline"> Aeropuerto</a></li>
+                        </ul>
+                        <h2 class="pb-3 md:pt-7 pt-3 font-semibold text-xl">Telefono</h2>
+                        <ul class="flex flex-col gap-1">
+                            <li><a href="tel:+50685581959" class="hover:underline">+506-8800-4080</a></li>
+                        </ul>
+                    </div>
+                    <div class="mx-auto w-full md:pl-5">
+                        <h2 class="pb-4 font-semibold text-xl">Social</h2>
+                        <ul class="flex flex-col gap-1 ">
+                            <li><a href="https://www.facebook.com" target="_blank" class="hover:underline">Facebook</a>
+                            </li>
+                            <li><a href="https://www.instagram.com" target="_blank"
+                                    class="hover:underline">Instagram</a></li>
+                            <li><a href="https://api.whatsapp.com" target="_blank" class="hover:underline">Whatsapp</a>
+                            </li>
+                            <li class="select-none md:block hidden"> &nbsp;</li>
+                            <li class="select-none md:block hidden"> &nbsp;</li>
+                        </ul>
+                        <h2 class="pb-3 md:pt-7 pt-3 font-bold text-xl">Email</h2>
+                        <ul class="flex flex-col gap-1">
+                            <li><a href="mailto:grtransportes.cr@gmail.com"
+                                    class="hover:underline">grtransportes.cr@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sm:col-span-2 md:pr-6  md:text-end space-y-1">
+                        <p class="font-semibold"> Transportes Santa Teresa</p>
+                        <p class="font-semibold"> Transportes San José</p>
+                        <p class="font-semibold"> Transportes Montezuma</p>
+                        <p class="font-semibold"> Transportes Nicaragua</p>
+                        <p class="font-semibold"> Transportes Arenal</p>
+                        <p class="font-semibold"> Transportes Tamarindo</p>
+                        <p class="font-semibold"> Transportes La Fortuna</p>
+                        <p class="font-semibold"> Transportes Panamá</p>
+                        <p class="font-semibold"> Transportes Hoteles en Santa Ana</p>
+                        <p class="font-semibold"> Transportes Hoteles en Escazú</p>
+                        <p class="font-semibold"> Transportes Aeropuerto Liberia</p>
+                        <p class="font-semibold"> Transportes Hoteles en San José</p>
+                        <p class="font-semibold"> Transportes Aeropuerto San José</p>
+                        <p class="font-semibold"> Transportes Monteverde</p>
+                    </div>
+                </div>
+                <div
+                    class="border-zinc-400 flex py-3 text-center gap-4 md:mt-8 mt-6 items-center justify-between md:flex-row flex-col border-t-2">
+                    <p>GR Transportes. Todos los derechos reservados 2025</p>
+                    <p class="cursor-pointer openPolicy">Terminos y Condiciones</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- =========components============ -->
+
+    <div id="contactForm" style="display: none;"
+        class="fixed border w-full h-screen top-0 left-0 z-40 transition-all duration-500 p-5 fastFadeIn flex items-center justify-center">
+        <div class="fixed fastFadeIn bg-[#0000009f] w-full h-screen top-0 left-0  transition-all duration-500 hidden"
+            id="overlay"></div>
+        <form method="POST" action="https://api.web3forms.com/submit"
+            class="max-w-3xl w-full mx-auto p-5 rounded-lg max-h-[80vh] popup h-full overflow-auto md:py-10 relative z-20 bg-white">
+            <div class="max-w-[30rem] w-full mx-auto">
+                <input type="hidden" name="access_key" value="00000000000000000000000">
+                <h2 class="text-center font-bold md:text-2xl text-xl text-zinc-700"> Reserva Hoy con GR Transportes</h2>
+                <div class="flex items-center justify-center">
+                    <img src="./Docs/Assets/black.png" class="md:h-28 h-20 opacity-40 mt-5 " alt="">
+                </div>
+                <input type="text" name="name"
+                    class=" md:p-3.5 p-3 rounded-lg bg-[#e0e0e0] w-full mt-8 border border-white focus:border-zinc-400 transition-all duration-500"
+                    required placeholder="Nombre Completo**">
+                <input type="email" name="Email*"
+                    class=" md:p-3.5 p-3 rounded-lg bg-[#e0e0e0] w-full mt-2 border border-white focus:border-zinc-400 transition-all duration-500"
+                    required placeholder="Email*">
+
+                <div
+                    class="relative dropdown-container rounded-lg bg-[#e0e0e0] pl-3 py-2 w-full mt-2 border border-white focus-within:border-zinc-400 transition-all duration-500">
+                    <!-- Selected Option -->
+                    <div
+                        class="flex selected dropdown-trigger items-center gap-2 cursor-pointer bg-transparent w-full p-2 rounded-lg">
+                        <img src="https://flagcdn.com/w40/us.png" alt="us Flag" class="w-6 h-4">
+                        <span class="text-gray-700">+1</span>
+                    </div>
+
+                    <!-- Dropdown Options -->
+                    <ul
+                        class="hidden dropdown dropdown max-h-60 overflow-auto fadeIn absolute left-0 top-full w-full bg-white rounded-lg shadow-md mt-1 z-10">
+                        <!-- Populated dynamically -->
+                    </ul>
+
+                    <!-- Input for phone number -->
+                    <input type="text" name="Telefono*"
+                        class="md:p-3.5 md:pt-4  p-3 w-full bg-transparent block absolute top-0 lg:max-w-[23rem] md:max-w-[18rem] max-w-[12rem] ml-auto right-0 rounded-lg focus:outline-none"
+                        required placeholder="Phone*">
+                </div>
+
+
+                <div class=" mt-4 flex items-center gap-5">
+                    <label for="insta" class="text-zinc-700">Adultos</label>
+                    <input id="insta" type="number" name="Adultos"
+                        class=" p-3 border md:max-w-[20rem] max-w-[9rem] ml-auto rounded-lg bg-[#e0e0e0] px-3 border-white focus:border-zinc-400 transition-all duration-500 w-full"
+                        placeholder="1">
+                </div>
+                <div class=" mt-2 flex items-center gap-5">
+                    <label for="TicTok" class="text-zinc-700">Niños (0-12)</label>
+                    <input id="TicTok" type="number" name="Niños"
+                        class=" md:max-w-[20rem] max-w-[9rem] ml-auto p-3 border rounded-lg bg-[#e0e0e0] px-3 border-white focus:border-zinc-400 transition-all duration-500 w-full"
+                        placeholder="0">
+                </div>
+
+
+                <textarea name="description"
+                    class=" md:p-3.5 resize-none p-3 rounded-lg bg-[#e0e0e0] w-full mt-4 border border-white focus:border-zinc-400 transition-all duration-500"
+                    placeholder="Mas detalles sobre tu viaje (opcional)" rows="4"></textarea>
+
+                <div class="flex items-center justify-center mt-4">
+                    <button
+                        class="px-10 text-lg transition-all duration-500 py-3 rounded-xl text-[#ffc656] hover:bg-[#ffc656] hover:text-white border-[#ffc656] border font-medium">ENVIAR</button>
+                </div>
+
+                <div class="flex gap-3 items-start mt-7">
+                    <input type="checkbox" name="checkbox" class="-mt-1 w-8 h-8 cursor-pointer">
+                    <p class="text-zinc-700 md:text-sm text-xs">Acepto recibir mensajes de WhatsApp para dar seguimiento
+                        al número
+                        de contacto proporcionado en este formulario.</p>
+                </div>
+                <div class="flex items-center md:justify-between justify-center md:mt-10 mt-6 gap-8">
+                    <a href=""> <i
+                            class="text-[#939393] md:text-5xl text-2xl fa-brands transition-all duration-500 hover:text-zinc-600 fa-square-facebook"></i></a>
+                    <a href=""> <i
+                            class="text-[#939393] md:text-5xl text-2xl fa-brands transition-all duration-500 hover:text-zinc-600 fa-instagram"></i></a>
+                    <a href=""> <i
+                            class="text-[#939393] md:text-5xl text-2xl fa-regular transition-all duration-500 hover:text-zinc-600 fa-envelope"></i></a>
+                    <a href=""> <i
+                            class="text-[#939393] md:text-5xl text-2xl fa-brands transition-all duration-500 hover:text-zinc-600 fa-whatsapp"></i></a>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <p class="w-14 bigSmallAnimation text-center transition-all duration-500 text-sm flex items-center justify-center leading-4 cursor-pointer h-14 rounded-full fixed z-30 bottom-5 right-5 font-medium md:hidden bg-[#3b9b7a]"
+        id="openLinks">
+        Click Me!
+    </p>
+
+    <div style="display: none;"
+        class=" flex items-center fadeIn transition-all duration-500 justify-center h-screen z-30 fixed top-0 left-0 w-full"
+        id="links">
+        <div class="bg-[#00000067] transition-all duration-500 w-full h-full fixed top-0 left-0" id="closeLinks"></div>
+        <div class="relative p-5">
+            <img src="./Docs/Assets/banner.png" class="w-full" alt="">
+            <a href="#" class="absolute block w-60 left-10 h-20 top-32"></a>
+            <a href="#" class="absolute block w-60 left-10 h-32 top-60"></a>
+            <a href="#" class="absolute block w-16 left-10 h-16 bottom-8"></a>
+            <a href="#" class="absolute block w-16 left-32 h-16 bottom-8"></a>
+            <a href="#" class="absolute block w-16 right-10 h-16 bottom-8"></a>
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="footer h-[100vh] bg-red-500">Footer Content</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./Docs/Javascripts/global.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
     <script>
-        // Register GSAP's ScrollTrigger plugin
         gsap.registerPlugin(ScrollTrigger);
 
-        // Pin the left div without adding extra space
-        gsap.to(".right", {
-            scrollTrigger: {
-                trigger: ".pin-wrapper", // Pin the wrapper
-                start: "top top",
-                end: "bottom bottom", // Pin ends when the content ends
-                scrub: true,
-                pin: ".pin-wrapper", // Pin the wrapper div
-                pinSpacing: false, // Disable additional spacing
-                markers: false // Debugging markers
+        ScrollTrigger.create({
+            trigger: ".mainSection",
+            start: "top top",
+            end: "bottom bottom",
+            pin: ".right",
+        });
+    </script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 3,
+            loop:true,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2.5,
+                slideShadows: true,
             }
         });
     </script>
-</body>
 
+</body>
 
 </html>
