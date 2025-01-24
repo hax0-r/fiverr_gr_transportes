@@ -138,7 +138,7 @@ openLinks.addEventListener('click', () => {
     links.style.opacity = "1"
     closeLinks.style.opacity = "1"
     openLinks.style.opacity = "0"
-    
+
 })
 
 closeLinks.addEventListener('click', () => {
@@ -149,3 +149,4 @@ closeLinks.addEventListener('click', () => {
         links.style.display = "none"
     }, 500)
 })
+
