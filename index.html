@@ -11,6 +11,7 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./Docs/Styles/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -152,31 +153,16 @@
                 traslados eficientes, seguros y confiables para sus equipos y operaciones.
             </p>
 
-            <div class="container2  ">
-                <div class="swiper tranding-slider">
-                    <div class="swiper-wrapper">
-                        <!-- Slide-start -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img ">
-                                <img src="./Docs/Assets/bus (1).jpg" alt="Bus">
-                            </div>
-                        </div>
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="./Docs/Assets/bus (2).jpg" alt="Bus">
-                            </div>
-                        </div>
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="./Docs/Assets/bus (3).jpg" alt="Bus">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="carousel h-[300px] cursor-grab w-full md:max-w-[40rem] mx-auto">
+                <a class="carousel-item md:!w-[235px]"><img class="rounded-2xl h-52 w-full md:scale-125 object-cover "
+                        src="./Docs/Assets/bus (3).jpg"></a>
+                <a class="carousel-item md:!w-[235px]"><img class="rounded-2xl h-52 md:scale-125 object-cover "
+                        src="./Docs/Assets/bus (1).jpg"></a>
+                <a class="carousel-item md:!w-[235px]"><img class="rounded-2xl h-52 w-full md:scale-125 object-cover "
+                        src="./Docs/Assets/bus (2).jpg"></a>
             </div>
 
-
-            <div class="flex items-center justify-center mt-8">
+            <div class="flex items-center justify-center md:mt-8">
                 <button
                     class="text-black bg-white openContactForm border-2 border-white max-w-sm w-full rounded-2xl font-semibold px-6 py-2 cursor-pointer hover:bg-transparent hover:text-[#fff] transition-all uppercase tracking-widest duration-500 text-nowrap">
                     Reserva Hoy!
@@ -576,21 +562,19 @@
 
 
     <script src="./Docs/Javascripts/global.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     <script>
-        var TrandingSlider = new Swiper('.tranding-slider', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 3,
-            initialSlide: 1, // Set the middle slide as the default
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 2.5,
-            },
+        $(document).ready(function () {
+            $('.carousel').carousel();
+
+            // setInterval(()=>{
+            //     $('.carousel').carousel('next');
+            // },2000)
+
         });
+
     </script>
 </body>
 
