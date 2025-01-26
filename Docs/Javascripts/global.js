@@ -1,13 +1,15 @@
 const responsiveNavbar = document.getElementById("responsiveNavbar");
 const openNav = document.getElementById("openNav");
-const closeNav = document.getElementById("closeNav");
+const closeNav = document.getElementsByClassName("closeNav");
 
 
 openNav.addEventListener('click', () => {
     responsiveNavbar.style.width = "100%"
 })
-closeNav.addEventListener('click', () => {
-    responsiveNavbar.style.width = "0%"
+Array.from(closeNav).forEach((clik) => {
+    clik.addEventListener('click', () => {
+        responsiveNavbar.style.width = "0%"
+    })
 })
 
 

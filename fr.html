@@ -40,19 +40,19 @@
 
     <div class="w-0 overflow-hidden z-50 ease-[cubic-bezier(.09,.33,0,.82)] bg-white fixed left-0 top-0 h-screen transition-all duration-500"
         id="responsiveNavbar">
-        <i class="fa-solid fa-x flex justify-end p-5 cursor-pointer pt-8 text-zinc-700 " id="closeNav"></i>
+        <i class="fa-solid fa-x flex justify-end p-5 cursor-pointer pt-8 text-zinc-700 closeNav" id="closeNav"></i>
         <ul class="flex flex-col  font-medium tracking-wide mt-6 p-2">
-            <li><a href="" class="text-nowrap block transition-all duration-500  rounded-lg bg-zinc-100 p-5 ">
+            <li><a href="" class="text-nowrap block transition-all duration-500 closeNav  rounded-lg bg-zinc-100 p-5 ">
                     Contact</a>
             </li>
-            <li><a href="" class="text-nowrap block transition-all duration-500 mt-2  rounded-lg  p-5">
+            <li><a href="#buses" class="text-nowrap block transition-all duration-500 closeNav mt-2  rounded-lg  p-5">
                     Autobus</a></li>
-            <li><a href="" class="text-nowrap block transition-all duration-500 mt-2  rounded-lg  p-5 closeNav">
+            <li><a href="" class="text-nowrap block transition-all duration-500 closeNav mt-2  rounded-lg  p-5 closeNav">
                     Autobus</a>
             </li>
-            <li><a href="" class="text-nowrap block transition-all duration-500 mt-2  rounded-lg  p-5"> Al
+            <li><a href="" class="text-nowrap block transition-all duration-500 closeNav mt-2  rounded-lg  p-5"> Al
                     Taxi</a></li>
-            <li><a class="text-nowrap block transition-all duration-500 mt-2  rounded-lg  p-5 AffiliateBusinessOpen">
+            <li><a href="#airport" class="text-nowrap block transition-all duration-500 closeNav mt-2  rounded-lg  p-5 AffiliateBusinessOpen">
                     Aéroport</a></li>
         </ul>
     </div>
@@ -68,11 +68,11 @@
             <div class="flex items-center justify-between md:gap-5 gap-5">
                 <div class="lg:flex hidden items-center gap-4">
                     <ul class="text-white flex items-center gap-5 font-medium">
-                        <li><a href="" class="navUnderLine">Contact</a></li>
-                        <li><a href="" class="navUnderLine">Autobus </a></li>
+                        <li><a class="navUnderLine openContactForm">Contact</a></li>
+                        <li><a href="#buses" class="navUnderLine">Autobus </a></li>
                         <li><a href="" class="navUnderLine">Autobus </a></li>
                         <li><a href="" class="navUnderLine">Taxi </a></li>
-                        <li><a href="" class="navUnderLine">Aéroport</a></li>
+                        <li><a href="#airport" class="navUnderLine">Aéroport</a></li>
 
                     </ul>
                     <button
@@ -124,11 +124,15 @@
         <div class="md:max-w-[30%] md:block hidden right bgBank2 rounded-3xl p-4 w-full">
             <div class="relative">
                 <img src="./Docs/Assets/banner.png" class="w-full" alt="">
-                <a href="#" class="absolute block w-60 left-10 h-20 top-32"></a>
-                <a href="#" class="absolute block w-60 left-10 h-32 top-60"></a>
-                <a href="#" class="absolute block w-16 left-10 h-16 bottom-8"></a>
-                <a href="#" class="absolute block w-16 left-32 h-16 bottom-8"></a>
-                <a href="#" class="absolute block w-16 right-10 h-16 bottom-8"></a>
+                <a target="_blank" href="https://www.facebook.com/GRTransportes100/reviews"
+                    class="absolute block w-60 left-10 h-20 top-36"></a>
+                <a target="_blank" href="#" class="absolute block w-60 left-10 h-32 top-60"></a>
+                <a target="_blank" href="https://www.instagram.com/gr_transportes?igsh=YnI1bXVydzk3dW9p"
+                    class="absolute block w-16 left-10 h-16 bottom-8"></a>
+                <a target="_blank" href="mailto:grtransportes.cr@gmail.com"
+                    class="absolute block w-16 left-32 h-16 bottom-8"></a>
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=50688004080"
+                    class="absolute block w-16 right-10 h-16 bottom-8"></a>
             </div>
         </div>
 
@@ -170,7 +174,7 @@
                 </ul>
             </div>
             <img src="./Docs/Assets/parrot2.png" class="md:absolute md:pt-20 pt-16 mx-auto md:mx-0  right-0" alt="">
-            <h2 class="text-center  md:text-4xl text-3xl pb-5 md:pt-24 pt-8">Notre flotte</h2>
+            <h2 id="buses" class="text-center  md:text-4xl text-3xl pb-5 md:pt-24 pt-8">Notre flotte</h2>
             <p class="font-medium text-center max-w-xl w-full mx-auto">Nous proposons un transport touristique de haute
                 qualité,
                 reliant les voyageurs aux destinations les plus emblématiques, et nous fournissons des solutions
@@ -356,7 +360,7 @@
                     Réservez dès aujourd'hui !
                 </button>
             </div>
-            <h2 class="text-center  md:text-4xl text-3xl pb-5 md:pt-24 pt-8">Services de transfert</h2>
+            <h2 id="airport" class="text-center  md:text-4xl text-3xl pb-5 md:pt-24 pt-8">Services de transfert</h2>
             <p class="font-medium text-center max-w-xl w-full mx-auto">Que votre destination soit sur la côte Pacifique,
                 les montagnes ou l'une des célèbres plages du Costa Rica, GR Transportes vous propose plusieurs
                 options de services de transport afin que vous puissiez choisir celle qui correspond le mieux à vos
@@ -504,11 +508,11 @@
                     <div class="mx-auto w-full md:pl-5">
                         <h2 class="pb-4 font-semibold text-xl">Sociale</h2>
                         <ul class="flex flex-col gap-1 ">
-                            <li><a href="https://www.facebook.com" target="_blank" class="hover:underline">Facebook</a>
+                            <li><a href="https://www.facebook.com/GRTransportes100" target="_blank" class="hover:underline">Facebook</a>
                             </li>
-                            <li><a href="https://www.instagram.com" target="_blank"
+                            <li><a href="https://www.instagram.com/gr_transportes?igsh=YnI1bXVydzk3dW9p" target="_blank"
                                     class="hover:underline">Instagram</a></li>
-                            <li><a href="https://api.whatsapp.com" target="_blank" class="hover:underline">Whatsapp</a>
+                            <li><a href="https://wa.link/7i29yf" target="_blank" class="hover:underline">Whatsapp</a>
                             </li>
                             <li class="select-none md:block hidden"> &nbsp;</li>
                             <li class="select-none md:block hidden"> &nbsp;</li>
@@ -559,7 +563,8 @@
             class="max-w-3xl w-full mx-auto p-5 rounded-lg max-h-[80vh] popup h-full overflow-auto md:py-10 relative z-20 bg-white">
             <div class="max-w-[30rem] w-full mx-auto">
                 <input type="hidden" name="access_key" value="00000000000000000000000">
-                <h2 class="text-center font-bold md:text-2xl text-xl text-zinc-700"> Réservez dès aujourd'hui avec GR Transport</h2>
+                <h2 class="text-center font-bold md:text-2xl text-xl text-zinc-700"> Réservez dès aujourd'hui avec GR
+                    Transport</h2>
                 <div class="flex items-center justify-center">
                     <img src="./Docs/Assets/black.png" class="md:h-28 h-20 opacity-40 mt-5 " alt="">
                 </div>
@@ -635,13 +640,13 @@
                         fourni dans ce formulaire.</p>
                 </div>
                 <div class="flex items-center md:justify-between justify-center md:mt-10 mt-6 gap-8">
-                    <a href=""> <i
+                    <a href="https://www.facebook.com/GRTransportes100"> <i
                             class="text-[#939393] md:text-5xl text-2xl fa-brands transition-all duration-500 hover:text-zinc-600 fa-square-facebook"></i></a>
-                    <a href=""> <i
+                    <a href="https://www.instagram.com/gr_transportes?igsh=YnI1bXVydzk3dW9p"> <i
                             class="text-[#939393] md:text-5xl text-2xl fa-brands transition-all duration-500 hover:text-zinc-600 fa-instagram"></i></a>
-                    <a href=""> <i
+                    <a href="mailto:grtransportes.cr@gmail.com"> <i
                             class="text-[#939393] md:text-5xl text-2xl fa-regular transition-all duration-500 hover:text-zinc-600 fa-envelope"></i></a>
-                    <a href=""> <i
+                    <a href="https://wa.link/7i29yf"> <i
                             class="text-[#939393] md:text-5xl text-2xl fa-brands transition-all duration-500 hover:text-zinc-600 fa-whatsapp"></i></a>
                 </div>
 
@@ -655,16 +660,20 @@
     </p>
 
     <div style="display: none;"
-        class=" flex items-center fadeIn transition-all duration-500 justify-center h-screen z-30 fixed top-0 left-0 w-full"
+        class=" flex items-center fadeIn transition-all duration-500 justify-center h-screen z-40 fixed top-0 left-0 w-full"
         id="links">
         <div class="bg-[#00000067] transition-all duration-500 w-full h-full fixed top-0 left-0" id="closeLinks"></div>
         <div class="relative p-5">
             <img src="./Docs/Assets/banner.png" class="w-full" alt="">
-            <a href="#" class="absolute block w-60 left-10 h-20 top-32"></a>
-            <a href="#" class="absolute block w-60 left-10 h-32 top-60"></a>
-            <a href="#" class="absolute block w-16 left-10 h-16 bottom-8"></a>
-            <a href="#" class="absolute block w-16 left-32 h-16 bottom-8"></a>
-            <a href="#" class="absolute block w-16 right-10 h-16 bottom-8"></a>
+            <a target="_blank" href="https://www.facebook.com/GRTransportes100/reviews"
+                class="absolute block w-60 left-10 h-20 top-36"></a>
+            <a target="_blank" href="#" class="absolute block w-60 left-10 h-32 top-60"></a>
+            <a target="_blank" href="https://www.instagram.com/gr_transportes?igsh=YnI1bXVydzk3dW9p"
+                class="absolute block w-16 left-10 h-16 bottom-8"></a>
+            <a target="_blank" href="mailto:grtransportes.cr@gmail.com"
+                class="absolute block w-16 left-32 h-16 bottom-8"></a>
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=50688004080"
+                class="absolute block w-16 right-10 h-16 bottom-8"></a>
         </div>
     </div>
 
