@@ -42,18 +42,17 @@
         id="responsiveNavbar">
         <i class="fa-solid fa-x flex justify-end p-5 cursor-pointer pt-8 text-zinc-700 closeNav" id="closeNav"></i>
         <ul class="flex flex-col  font-medium tracking-wide mt-6 p-2">
-            <li><a class="text-nowrap closeNav block transition-all duration-500  rounded-lg bg-zinc-100 p-5 ">
+            <li><a class="text-nowrap closeNav block transition-all duration-500 openContactForm  rounded-lg bg-zinc-100 p-5 ">
                     Contacto</a>
             </li>
             <li><a href="#Buses" class="text-nowrap closeNav block transition-all duration-500 mt-2  rounded-lg  p-5">
                     Buses</a></li>
-            <li><a href="" class="text-nowrap block closeNav transition-all duration-500 mt-2  rounded-lg  p-5 closeNav">
-                    Busetas</a>
             </li>
-            <li><a href="" class="text-nowrap block closeNav transition-all duration-500 mt-2  rounded-lg  p-5"> Al
-                    Taxi</a></li>
-            <li><a href="#Airport" class="text-nowrap block transition-all closeNav duration-500 mt-2  rounded-lg  p-5 AffiliateBusinessOpen">
+            <li><a href="#Airport"
+                    class="text-nowrap block transition-all closeNav duration-500 mt-2  rounded-lg  p-5 AffiliateBusinessOpen">
                     Aeropuerto</a></li>
+            <li><a href="#fechasespeciales" class="text-nowrap block closeNav transition-all duration-500 mt-2  rounded-lg  p-5"> 
+                    fechas especiales</a></li>
         </ul>
     </div>
 
@@ -70,9 +69,8 @@
                     <ul class="text-white flex items-center gap-5 font-medium">
                         <li><a class="navUnderLine openContactForm">Contacto</a></li>
                         <li><a href="#Buses" class="navUnderLine">Buses </a></li>
-                        <li><a href="" class="navUnderLine">Busetas </a></li>
-                        <li><a href="" class="navUnderLine">Taxi </a></li>
                         <li><a href="#Airport" class="navUnderLine">Aeropuerto</a></li>
+                        <li><a href="#fechasespeciales" class="navUnderLine">fechas especiales </a></li>
 
                     </ul>
                     <button
@@ -124,11 +122,15 @@
         <div class="md:max-w-[30%] md:block hidden right bgBank2 rounded-3xl p-4 w-full">
             <div class="relative">
                 <img src="./Docs/Assets/banner.png" class="w-full" alt="">
-                <a target="_blank" href="https://www.facebook.com/GRTransportes100/reviews" class="absolute block w-60 left-10 h-20 top-36"></a>
+                <a target="_blank" href="https://www.facebook.com/GRTransportes100/reviews"
+                    class="absolute block w-60 left-10 h-20 top-36"></a>
                 <a target="_blank" href="#" class="absolute block w-60 left-10 h-32 top-60"></a>
-                <a target="_blank" href="https://www.instagram.com/gr_transportes?igsh=YnI1bXVydzk3dW9p" class="absolute block w-16 left-10 h-16 bottom-8"></a>
-                <a target="_blank" href="mailto:grtransportes.cr@gmail.com" class="absolute block w-16 left-32 h-16 bottom-8"></a>
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=50688004080" class="absolute block w-16 right-10 h-16 bottom-8"></a>
+                <a target="_blank" href="https://www.instagram.com/gr_transportes?igsh=YnI1bXVydzk3dW9p"
+                    class="absolute block w-16 left-10 h-16 bottom-8"></a>
+                <a target="_blank" href="mailto:grtransportes.cr@gmail.com"
+                    class="absolute block w-16 left-32 h-16 bottom-8"></a>
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=50688004080"
+                    class="absolute block w-16 right-10 h-16 bottom-8"></a>
             </div>
         </div>
 
@@ -143,7 +145,7 @@
                     un referente en transporte turístico y corporativo en el país.
                 </p>
             </div>
-            <div class="flex items-center justify-center md:flex-row flex-col-reverse md:gap-20 md:pt-24 pt-16 gap-5">
+            <div id="fechasespeciales" class="flex items-center justify-center md:flex-row flex-col-reverse md:gap-20 md:pt-24 pt-16 gap-5">
                 <ul class="font-medium space-y-2">
                     <li> Giras Educativas en Costa Rica</li>
                     <li> Traslados a Playas de Costa Rica</li>
@@ -454,11 +456,10 @@
                     <div class="mx-auto w-full md:px-5">
                         <h2 class="pb-4 font-semibold text-xl">Links</h2>
                         <ul class="flex flex-col gap-1 ">
-                            <li><a href="#" class="hover:underline"> Contacto</a></li>
-                            <li><a href="#" class="hover:underline"> Buses</a></li>
-                            <li><a href="#" class="hover:underline"> Busetas</a></li>
-                            <li><a href="#" class="hover:underline"> Taxi</a></li>
-                            <li><a href="#" class="hover:underline"> Aeropuerto</a></li>
+                            <li><a class="openContactForm hover:underline"> Contacto</a></li>
+                            <li><a href="#Buses" class="hover:underline"> Buses</a></li>
+                            <li><a href="#Airport" class="hover:underline"> Aeropuerto</a></li>
+                            <li><a href="#fechasespeciales" class="hover:underline"> Fechas Especiales</a></li>
                         </ul>
                         <h2 class="pb-3 md:pt-7 pt-3 font-semibold text-xl">Telefono</h2>
                         <ul class="flex flex-col gap-1">
@@ -468,7 +469,8 @@
                     <div class="mx-auto w-full md:pl-5">
                         <h2 class="pb-4 font-semibold text-xl">Social</h2>
                         <ul class="flex flex-col gap-1 ">
-                            <li><a href="https://www.facebook.com/GRTransportes100" target="_blank" class="hover:underline">Facebook</a>
+                            <li><a href="https://www.facebook.com/GRTransportes100" target="_blank"
+                                    class="hover:underline">Facebook</a>
                             </li>
                             <li><a href="https://www.instagram.com/gr_transportes?igsh=YnI1bXVydzk3dW9p" target="_blank"
                                     class="hover:underline">Instagram</a></li>
@@ -502,9 +504,9 @@
                     </div>
                 </div>
                 <div
-                    class="border-zinc-400 flex py-3 text-center gap-4 md:mt-8 mt-6 items-center justify-between md:flex-row flex-col border-t-2">
+                    class="border-zinc-400 flex py-3 text-center gap-4 md:mt-8 mt-6 items-center justify-center md:flex-row flex-col border-t-2">
                     <p>GR Transportes. Todos los derechos reservados 2025</p>
-                    <p class="cursor-pointer openPolicy">Terminos y Condiciones</p>
+                    <!-- <p class="cursor-pointer openPolicy">Terminos y Condiciones</p> -->
                 </div>
             </div>
         </div>
@@ -624,11 +626,15 @@
         <div class="bg-[#00000067] transition-all duration-500 w-full h-full fixed top-0 left-0" id="closeLinks"></div>
         <div class="relative p-5">
             <img src="./Docs/Assets/banner.png" class="w-full" alt="">
-            <a target="_blank" href="https://www.facebook.com/GRTransportes100/reviews" class="absolute block w-60 left-10 h-20 top-36"></a>
+            <a target="_blank" href="https://www.facebook.com/GRTransportes100/reviews"
+                class="absolute block w-60 left-10 h-20 top-36"></a>
             <a target="_blank" href="#" class="absolute block w-60 left-10 h-32 top-60"></a>
-            <a target="_blank" href="https://www.instagram.com/gr_transportes?igsh=YnI1bXVydzk3dW9p" class="absolute block w-16 left-10 h-16 bottom-8"></a>
-            <a target="_blank" href="mailto:grtransportes.cr@gmail.com" class="absolute block w-16 left-32 h-16 bottom-8"></a>
-            <a target="_blank" href="https://api.whatsapp.com/send?phone=50688004080" class="absolute block w-16 right-10 h-16 bottom-8"></a>
+            <a target="_blank" href="https://www.instagram.com/gr_transportes?igsh=YnI1bXVydzk3dW9p"
+                class="absolute block w-16 left-10 h-16 bottom-8"></a>
+            <a target="_blank" href="mailto:grtransportes.cr@gmail.com"
+                class="absolute block w-16 left-32 h-16 bottom-8"></a>
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=50688004080"
+                class="absolute block w-16 right-10 h-16 bottom-8"></a>
         </div>
     </div>
 
