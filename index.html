@@ -675,6 +675,31 @@
                 alert("Please enter valid information.");
             }
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form");
+
+            form.addEventListener("submit", function (event) {
+                const inputs = form.querySelectorAll("input, textarea");
+                const urlPattern = /https?:\/\/[^\s]+/g; // Regex for detecting links
+
+                let hasInvalidLink = false;
+
+                inputs.forEach(input => {
+                    if (urlPattern.test(input.value)) { // Check if input contains a link
+                        hasInvalidLink = true;
+                        input.style.border = "2px solid red"; // Highlight field
+                    } else {
+                        input.style.border = ""; // Reset border if valid
+                    }
+                });
+
+                if (hasInvalidLink) {
+                    event.preventDefault(); // Stop form submission
+                    alert("Links are not allowed in the input fields."); // Show error message
+                }
+            });
+        });
     </script>
 
     <script>
