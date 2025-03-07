@@ -42,7 +42,8 @@
         id="responsiveNavbar">
         <i class="fa-solid fa-x flex justify-end p-5 cursor-pointer pt-8 text-zinc-700 closeNav" id="closeNav"></i>
         <ul class="flex flex-col  font-medium tracking-wide mt-6 p-2">
-            <li><a class="text-nowrap closeNav block transition-all duration-500 openContactForm  rounded-lg bg-zinc-100 p-5 ">
+            <li><a
+                    class="text-nowrap closeNav block transition-all duration-500 openContactForm  rounded-lg bg-zinc-100 p-5 ">
                     Contacto</a>
             </li>
             <li><a href="#Buses" class="text-nowrap closeNav block transition-all duration-500 mt-2  rounded-lg  p-5">
@@ -51,8 +52,9 @@
             <li><a href="#Airport"
                     class="text-nowrap block transition-all closeNav duration-500 mt-2  rounded-lg  p-5 AffiliateBusinessOpen">
                     Aeropuerto</a></li>
-            <li><a href="#fechasespeciales" class="text-nowrap block closeNav transition-all duration-500 mt-2  rounded-lg  p-5"> 
-                    fechas especiales</a></li>
+            <li><a href="#fechasespeciales"
+                    class="text-nowrap block closeNav transition-all duration-500 mt-2  rounded-lg  p-5">
+                    fechas especiales</a></li>
         </ul>
     </div>
 
@@ -70,7 +72,7 @@
                         <li><a class="navUnderLine openContactForm">Contacto</a></li>
                         <li><a href="#Buses" class="navUnderLine">Buses </a></li>
                         <li><a href="#Airport" class="navUnderLine">Aeropuerto</a></li>
-                        <li><a href="#fechasespeciales" class="navUnderLine">fechas especiales </a></li>
+                        <li><a href="#fechasespeciales" class="navUnderLine">fechas especiales </a></li>
 
                     </ul>
                     <button
@@ -145,7 +147,8 @@
                     un referente en transporte turístico y corporativo en el país.
                 </p>
             </div>
-            <div id="fechasespeciales" class="flex items-center justify-center md:flex-row flex-col-reverse md:gap-20 md:pt-24 pt-16 gap-5">
+            <div id="fechasespeciales"
+                class="flex items-center justify-center md:flex-row flex-col-reverse md:gap-20 md:pt-24 pt-16 gap-5">
                 <ul class="font-medium space-y-2">
                     <li> Giras Educativas en Costa Rica</li>
                     <li> Traslados a Playas de Costa Rica</li>
@@ -524,7 +527,9 @@
         <form method="POST" action="https://api.web3forms.com/submit"
             class="max-w-3xl w-full mx-auto p-5 rounded-lg max-h-[80vh] popup h-full overflow-auto md:py-10 relative z-20 bg-white">
             <div class="max-w-[30rem] w-full mx-auto">
-                <input type="hidden" name="access_key" value="00000000000000000000000">
+                <input type="hidden" name="access_key" value="8344cb92-6138-43c1-a301-0ae475111038">
+                <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                <input type="text" name="honeypot" style="display: none;">
                 <h2 class="text-center font-bold md:text-2xl text-xl text-zinc-700"> Reserva Hoy con GR Transportes</h2>
                 <div class="flex items-center justify-center">
                     <img src="./Docs/Assets/black.png" class="md:h-28 h-20 opacity-40 mt-5 " alt="">
@@ -532,7 +537,7 @@
                 <input type="text" name="name"
                     class=" md:p-3.5 p-3 rounded-lg bg-[#e0e0e0] w-full mt-8 border border-white focus:border-zinc-400 transition-all duration-500"
                     required placeholder="Nombre Completo*">
-                <input type="email" name="Email*"
+                <input type="email" name="Email*" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                     class=" md:p-3.5 p-3 rounded-lg bg-[#e0e0e0] w-full mt-2 border border-white focus:border-zinc-400 transition-all duration-500"
                     required placeholder="Email*">
 
@@ -552,7 +557,7 @@
                     </ul>
 
                     <!-- Input for phone number -->
-                    <input type="text" name="Telefono*"
+                    <input type="text" name="Telefono*" pattern="^[0-9\+\-\s]+$"
                         class="md:p-3.5 md:pt-4  p-3 w-full bg-transparent block absolute top-0 lg:max-w-[23rem] md:max-w-[18rem] max-w-[12rem] ml-auto right-0 rounded-lg focus:outline-none"
                         required placeholder="Phone*">
                 </div>
@@ -649,7 +654,28 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <script src="https://www.google.com/recaptcha/api.js?render=your-site-key"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('your-site-key', { action: 'submit' }).then(function (token) {
+                document.getElementById('recaptchaResponse').value = token;
+            });
+        });
 
+        document.querySelector("form").addEventListener("submit", function (event) {
+            let email = document.querySelector("input[name='email']").value;
+            let phone = document.querySelector("input[name='Telefono*']").value;
+            let name = document.querySelector("input[name='name']").value;
+
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            let phonePattern = /^[0-9\+\-\s]+$/;
+
+            if (!emailPattern.test(email) || !phonePattern.test(phone) || name.length < 2) {
+                event.preventDefault();
+                alert("Please enter valid information.");
+            }
+        });
+    </script>
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
