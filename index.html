@@ -565,7 +565,7 @@
 
                 <div class=" mt-4 flex items-center gap-5">
                     <label for="insta" class="text-zinc-700">Fecha</label>
-                    <input id="insta" type="date" name="Fecha"
+                    <input required id="insta" type="date" name="Fecha"
                         class=" p-3 border md:max-w-[20rem] max-w-[9rem] ml-auto rounded-lg bg-[#e0e0e0] px-3 border-white focus:border-zinc-400 transition-all duration-500 w-full">
                 </div>
 
@@ -578,19 +578,19 @@
 
                 <div class=" mt-2 flex items-center gap-5">
                     <label for="insta" class="text-zinc-700">Adultos</label>
-                    <input id="insta" type="number" name="Adultos"
+                    <input required id="insta" type="number" name="Adultos"
                         class=" p-3 border md:max-w-[20rem] max-w-[9rem] ml-auto rounded-lg bg-[#e0e0e0] px-3 border-white focus:border-zinc-400 transition-all duration-500 w-full"
                         placeholder="1">
                 </div>
                 <div class=" mt-2 flex items-center gap-5">
-                    <label for="TicTok" class="text-zinc-700">Niños (0-12)</label>
-                    <input id="TicTok" type="number" name="Niños"
+                    <label for="TicTok"  class="text-zinc-700">Niños (0-12)</label>
+                    <input id="TicTok" required type="number" name="Niños"
                         class=" md:max-w-[20rem] max-w-[9rem] ml-auto p-3 border rounded-lg bg-[#e0e0e0] px-3 border-white focus:border-zinc-400 transition-all duration-500 w-full"
                         placeholder="0">
                 </div>
 
 
-                <textarea name="description"
+                <textarea name="description" required
                     class=" md:p-3.5 resize-none p-3 rounded-lg bg-[#e0e0e0] w-full mt-4 border border-white focus:border-zinc-400 transition-all duration-500"
                     placeholder="Mas detalles sobre tu viaje (opcional)" rows="4"></textarea>
 
@@ -600,7 +600,7 @@
                 </div>
 
                 <div class="flex gap-3 items-start mt-7">
-                    <input type="checkbox" name="checkbox" class="-mt-1 w-8 h-8 cursor-pointer">
+                    <input required type="checkbox" name="checkbox" class="-mt-1 w-8 h-8 cursor-pointer">
                     <p class="text-zinc-700 md:text-sm text-xs">Acepto recibir mensajes de WhatsApp para dar seguimiento
                         al número
                         de contacto proporcionado en este formulario.</p>
